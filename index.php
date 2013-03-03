@@ -13,6 +13,7 @@ class Index
 
 		//echo $grabContent->grabUrl("http://www.jonesso.com/roster.php");
 		$comp = array();
+		ini_set('max_execution_time', 2000);
 		for($pager = 15; $pager <= 150; $pager = $pager + 15) {
 			$html = str_get_html($grabContent->grabUrl("http://www.jonesso.com/roster.php?grp=" . $pager));
 
