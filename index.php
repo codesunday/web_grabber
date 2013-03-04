@@ -1,10 +1,10 @@
-  <?php
+<?php
 require_once ("Grabber.php");
 require_once ("simple_html_dom.php");
 require_once ("Extracter.php");
 class Index
 {
-  private $_grabContent;
+	private $_grabContent;
 
 	public function Process()
 	{
@@ -19,7 +19,8 @@ class Index
 
 			$extract = new Extracter();
 			$comp = $extract->extractData($html, $comp);
-
+			$html->clear(); 
+			unset($html);
 		}
 
 		print_r($comp);
